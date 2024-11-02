@@ -8,13 +8,21 @@ using UnityEngine;
 public class PlayerMovementTD : MonoBehaviour
 {
   public float speed = 3f;
-  private Rigidbody2D rb;
+
+
+    private bool flippedLeft;
+    
+   
+
+    private Rigidbody2D rb;
   private Vector2 moveInput;
   public bool dano = false;
   private float moveY;
   private float moveX;
   private SpriteRenderer spriteRenderer;
-  void Start()
+    internal bool facingRight;
+
+    void Start()
   {
     rb = GetComponent<Rigidbody2D>();
     spriteRenderer = GetComponent<SpriteRenderer>();
